@@ -1,3 +1,4 @@
+import { Redirect } from "@/components/redirect/Redirect";
 import { getOffer } from "@/services/getOffer"
 import type { Metadata } from "next/types"
 
@@ -13,9 +14,10 @@ export async function generateMetadata({params}: {params: {offerId: string}}): P
     }
 }
 
-export default async function Offer() {
-
+export default async function Offer({params}: {params: {offerId: string}}) {
+    const offerId = params.offerId;
     return <div>
         Nothing
+        <Redirect url={`https://www.infojobs.net/madrid/instalador-cocinas/of-i${offerId}`}/>
     </div>
 }
