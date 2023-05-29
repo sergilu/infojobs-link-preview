@@ -14,7 +14,7 @@ export interface Offer {
     studiesMin: string;
     experienceMin: string;
 
-    constractType: string;
+    contractType: string;
     workingHours: string;
     salaryDescription: string;
 

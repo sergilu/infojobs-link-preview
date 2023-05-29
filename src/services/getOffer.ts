@@ -19,7 +19,7 @@ function mapToOffer(apiResponse: any): Offer {
         logo: apiResponse.profile.logoUrl,
 
         city: apiResponse.city,
-        privince: apiResponse.province.value,
+        province: apiResponse.province.value,
         country: apiResponse.country.value,
 
         vacancies: apiResponse.vacancies,
@@ -35,5 +35,5 @@ function mapToOffer(apiResponse: any): Offer {
         
 
         description: apiResponse.description,
-    } as any
+    }
 }

@@ -6,5 +6,9 @@ export async function getOfferPreviewImage(offerId: string): Promise<ImageRespon
     const offer = await getOffer(offerId)
     return new ImageResponse(
         <OfferPreview offer={offer} />
+        ,{
+            width: 1200,
+            height: 630,
+        }
     )
 }

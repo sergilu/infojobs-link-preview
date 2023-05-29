@@ -8,6 +8,7 @@ export async function generateMetadata({params}: {params: {offerId: string}}): P
         openGraph: {
             type: 'website',
             title: offer.title,
+            siteName: 'InfoJobs'
         }
     }
 }
