@@ -9,18 +9,19 @@ const previewStyle: CSSProperties = {
     width: '100%',
     height: '100%',
     padding: '5vh',
+    backgroundColor: 'whitesmoke',
 }
 
 const headerStyle: CSSProperties = {
     display: 'flex',
-    height: '40%'
+    height: '40%',
 }
 
 
 const offerLogoStyle: CSSProperties = {
     height: '100%',
     aspectRatio: '1',
-    marginRight: '1em'
+    marginRight: '1em',
 }
 
 
@@ -85,7 +86,7 @@ export function OfferPreview({
             </div>
             <div style={infoStyle}>
                 <div style={infoItemStyle}>
-                    {`${offer.city},${offer.province}(${offer.country})`}
+                    {`${offer.city}, ${offer.province} (${offer.country})`}
                 </div>
                 <div style={infoItemStyle}>
                     Contrato {offer.contractType}
