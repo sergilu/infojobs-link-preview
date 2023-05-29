@@ -1,10 +1,20 @@
 import { getOffer } from "@/services/getOffer"
+import type { Metadata } from "next/types"
 
-const id = 'cc8923015d4b038a82708f346b1d76';
+export async function generateMetadata({params}: {params: {offerId: string}}): Promise<Metadata> {
+    const offerId = params.offerId;
+    const offer = await getOffer(offerId);
+    return {
+        openGraph: {
+            type: 'website',
+            title: offer.title,
+        }
+    }
+}
 
 export default async function Offer() {
-    const response = await getOffer(id)
+
     return <div>
-        {JSON.stringify(response)}
+        Nothing
     </div>
 }

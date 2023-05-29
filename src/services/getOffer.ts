@@ -2,7 +2,7 @@ import { Offer } from "@/models/Offer"
 
 const token = 'bWlkdWdhOnFzNW5LcHAzOE4oSA=='
 
-export function getOffer(id: string): Promise<any> {
+export function getOffer(id: string): Promise<Offer> {
     return fetch(`https://api.infojobs.net/api/7/offer/${id}`,{
         headers: {
           'Content-Type': 'application/json',

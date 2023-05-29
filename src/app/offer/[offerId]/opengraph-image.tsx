@@ -1,8 +1,7 @@
-import { OfferPreview } from "@/components/offer-preview/OfferPreview";
-import { ImageResponse } from "next/server";
+import { getOfferPreviewImage } from "@/services/getOfferPreviewImage";
 
-export default async function og(props: any) {
-    return new ImageResponse(
-        <OfferPreview />
-    )
+
+export default async function OfferOpenGraphImage({params}: {params: {offerId: string}}) {
+    const offerId = params.offerId;
+    return getOfferPreviewImage(offerId);
 }
