@@ -1,0 +1,1 @@
+export { default as Button } from '@s-ui/react-atom-button';

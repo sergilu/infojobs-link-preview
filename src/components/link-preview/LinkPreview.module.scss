@@ -1,0 +1,14 @@
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    max-width: 436px;
+    //height: 309px;
+    aspect-ratio: 436 / 309 ;
+}
+
+.preview {
+    border-radius: 1rem;
+    //max-width: 800px;
+    width: 100%;
+    aspect-ratio: 800 / 200 
+}
