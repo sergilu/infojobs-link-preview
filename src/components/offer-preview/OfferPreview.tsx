@@ -27,16 +27,16 @@ const offerLogoStyle: CSSProperties = {
 
 
 const titleStyle: CSSProperties = {
-    fontSize: '60px',
-    lineHeight: '70px',
+    fontSize: '50px',
+    lineHeight: '60px',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    maxHeight: '160px',
-    maxWidth: '100%',
+    maxHeight: '140px',
+    width: '100%',
 }
 
 const companyNameStyle: CSSProperties = {
-    fontSize: '30px',
+    fontSize: '40px',
 }
 
 const infoStyle: CSSProperties = {
@@ -47,7 +47,8 @@ const infoStyle: CSSProperties = {
 
 const infoItemStyle: CSSProperties = {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
+    gap: '1rem',
     fontSize: '40px'
 }
 
@@ -58,7 +59,13 @@ const logoStyle: CSSProperties = {
 const headingsStyles: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexGrow: 1,
+    width: '100%'
+}
+
+const lowercaseStyle: CSSProperties = {
+    textTransform: 'lowercase',
 }
 
 export interface OfferPreviewProps {
@@ -89,10 +96,10 @@ export function OfferPreview({
                     {`${offer.city}, ${offer.province} (${offer.country})`}
                 </div>
                 <div style={infoItemStyle}>
-                    Contrato {offer.contractType}
+                    Contrato <span style={lowercaseStyle}>{offer.contractType}</span>
                 </div>
                 <div style={infoItemStyle}>
-                    Jornada {offer.workingHours}
+                    Jornada <span style={lowercaseStyle}>{offer.workingHours}</span>
                 </div>
                 <div style={infoItemStyle}>
                     {offer.salaryDescription}
