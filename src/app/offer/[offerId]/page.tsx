@@ -28,7 +28,7 @@ export default async function Offer({params}: {params: {offerId: string}}) {
         <>
         <div className={styles.page}>
             <div className={styles.content}>
-            Redirecting to &nbsp; <a className={styles.link} href="url">{url}</a>  
+            Redirecting to &nbsp; <a className={styles.link} href={url}>{url}</a>  
             </div>
         </div>
         <Redirect url={url}/>
