@@ -1,14 +1,41 @@
 .card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 1rem;
     max-width: 436px;
-    //height: 309px;
     aspect-ratio: 436 / 309 ;
+    padding: 1rem;
+    box-shadow: -1px 1px 16px -6px rgba(0,0,0,0.15);
+}
+
+.info {
+    margin-block: auto;
 }
 
 .preview {
+    display: flex;
+    flex-direction: column;
     border-radius: 1rem;
-    //max-width: 800px;
     width: 100%;
-    aspect-ratio: 800 / 200 
+    aspect-ratio: 1200 / 630;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.description {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.domain {
+    color: gray;
 }

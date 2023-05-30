@@ -14,6 +14,7 @@ export function getOffer(id: string): Promise<Offer> {
 
 function mapToOffer(apiResponse: any): Offer {
     return {
+        id: apiResponse.id,
         title: apiResponse.title,
         company: apiResponse.profile.name,
         logo: apiResponse.profile.logoUrl,

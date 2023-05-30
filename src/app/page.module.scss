@@ -1,9 +1,58 @@
 .main {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
     max-width: 1000px;
     margin-inline: auto;
+    gap: 2rem;
+    padding-top: 10rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.generateLink {
+    overflow-wrap: anywhere;
 }
 
 .linkPreview {
     margin-inline: auto;
+}
+
+.linkPreviewAndLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 40px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-inline: auto;
+    & > * {
+        height: 1em;
+    }
+}
+
+.examplesTitle {
+    text-align: center;
+}
+
+.examplesList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 1rem;
 }

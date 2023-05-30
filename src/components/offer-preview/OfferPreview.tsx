@@ -22,6 +22,7 @@ const offerLogoStyle: CSSProperties = {
     height: '100%',
     aspectRatio: '1',
     marginRight: '1em',
+    borderRadius: '30px',
 }
 
 
