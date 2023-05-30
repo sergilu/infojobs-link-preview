@@ -9,7 +9,7 @@ export function Redirect({
     url
 }: RedirectProps) {
     useEffect(() => {
-        window.location.href = url
+        window.location.replace(url);
     }, [url])
     return null;
 }
