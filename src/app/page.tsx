@@ -45,10 +45,17 @@ export default async function Home(props: HomePageProps) {
       <h1 className={styles.heading}>
         <Logo /> Link Preview
       </h1>
-      <form className={styles.row} action={onSubmit}>
-        <Input required type='url' name='url' defaultValue={offerUrl} placeholder={INPUT_PLACEHOLDER}/>
-        <Button>Create</Button>
-      </form>
+      <div className={styles.inputUrlAndButtonWrapper}>
+        <span className={styles.inputUrlHint}>
+          Paste a URL of an InfoJobs job offer to generate a link with a Social Preview
+        </span>
+        <form className={styles.row} action={onSubmit}>
+          <div className={styles.inputUrlWrapper}>
+            <Input required type='url' name='url' defaultValue={offerUrl} placeholder={INPUT_PLACEHOLDER}/>
+          </div>
+          <Button>Create</Button>
+        </form>
+      </div>
       {
         offer
         ? <LinkPreviewAndLink

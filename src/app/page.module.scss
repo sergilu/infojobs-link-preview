@@ -18,6 +18,19 @@
     width: 100%;
 }
 
+.inputUrlAndButtonWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputUrlHint {
+    margin-block-end: 0.5rem;
+}
+
+.inputUrlWrapper {
+    flex-grow: 1;
+}
+
 .generateLink {
     overflow-wrap: anywhere;
 }
